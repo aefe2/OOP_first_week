@@ -14,6 +14,7 @@ admin.site.register(Author, AuthorAdmin)
 
 # Register the Admin classes for Book using the decorator
 class BooksInstanceInline(admin.TabularInline):
+    list_display = ('title', 'status', 'due_back', 'id')
     model = BookInstance
 
 
